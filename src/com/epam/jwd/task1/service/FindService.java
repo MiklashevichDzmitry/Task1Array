@@ -11,9 +11,9 @@ public interface FindService {
 	
 	int FindMin(CustomArray array) throws ServiceException;
 	
-	int FindPositive(CustomArray array) throws ServiceException;
+	int FindPositiveNumbers(CustomArray array) throws ServiceException;
 	
-	int FindNegative(CustomArray array) throws ServiceException;
+	int FindNegativeNumbers(CustomArray array) throws ServiceException;
 	
 	int FindSum(CustomArray array) throws ServiceException;
 	

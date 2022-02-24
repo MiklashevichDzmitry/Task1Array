@@ -3,9 +3,13 @@ package com.epam.jwd.task1.service.impl;
 import com.epam.jwd.task1.entity.CustomArray;
 import com.epam.jwd.task1.service.FindService;
 import com.epam.jwd.task1.exception.ServiceException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class FindServiceImpl implements FindService {
 
+	private static final Logger LOGGER = LogManager.getLogger();
+	
 	public double FindAverageValue(CustomArray array) throws ServiceException {
 
 		int[] sourceArray = array.getArray();
@@ -25,6 +29,11 @@ public class FindServiceImpl implements FindService {
 	}
 
 	public int FindMax(CustomArray array) throws ServiceException {
+
+		if (array == null || array.length() == 0) {
+			LOGGER.info("Array equals null or array length equals 0");
+			throw new ServiceException("Array equals null or array length equals 0");
+		}
 
 		int[] sourceArray = array.getArray();
 		int maxNum = sourceArray[0];
@@ -59,7 +68,7 @@ public class FindServiceImpl implements FindService {
 		return minNum;
 	}
 
-	public int FindPositive(CustomArray array) throws ServiceException {
+	public int FindPositiveNumbers(CustomArray array) throws ServiceException {
 
 		int[] sourceArray = array.getArray();
 		int positiveMumber = 0;
@@ -79,7 +88,7 @@ public class FindServiceImpl implements FindService {
 		return positiveMumber;
 	}
 
-	public int FindNegative(CustomArray array) throws ServiceException {
+	public int FindNegativeNumbers(CustomArray array) throws ServiceException {
 
 		int[] sourceArray = array.getArray();
 		int negativeMumber = 0;
@@ -88,7 +97,7 @@ public class FindServiceImpl implements FindService {
 
 			for (int j : sourceArray) {
 
-				if (j > 0) {
+				if (j < 0) {
 
 					negativeMumber++;
 
@@ -130,5 +139,5 @@ public class FindServiceImpl implements FindService {
 				}
 			}
 		}
-	}
+	} 
 }

@@ -16,13 +16,17 @@ public class CustomArray {
 		array = new int[0];
 	}
 
-	public CustomArray(int... CustomArray) {
+	public CustomArray(int... array) {
 		LOGGER.info("creating new CustomArray(" + Arrays.toString(array) + ")");
-		this.array = array.clone();
+		this.array = array != null ? array.clone() : null;;
+	}
+
+	public int length() {
+		return array.length;
 	}
 
 	public int[] getArray() {
-		LOGGER.info("get elements");
+		LOGGER.info("get elements"); 
 		return array != null ? array.clone() : null;
 	}
 

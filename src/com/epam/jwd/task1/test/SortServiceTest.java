@@ -10,21 +10,14 @@ import com.epam.jwd.task1.service.impl.SortServiceImpl;
 
 class SortServiceTest {
 
+	private final CustomArray testArray = new CustomArray(88, 454654, 12, 445, -42323, 699, -988, 0);
+	private SortServiceImpl sortErvice = new SortServiceImpl();
+	
 	@Test
-	void testSort() {
+	void testSort() throws ServiceException {
 
-		int[] array = {1, 5, 4, 3, 7};
-		CustomArray testArray = new CustomArray();
-		testArray.setArray(array);
-
-		SortServiceImpl sortService = new SortServiceImpl();
-
-		try {
-			sortService.bubbleSort(testArray);
-			System.out.println(testArray + "\n");
-		} catch (ServiceException e) {
-			System.out.println(e.getClass() + "\n");
-		}
+		sortErvice.bubbleSort(testArray);
+		System.out.print(testArray);
 
 	}
 }
