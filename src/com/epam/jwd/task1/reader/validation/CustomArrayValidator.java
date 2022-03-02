@@ -1,4 +1,4 @@
-package com.epam.jwd.task1.validation;
+package com.epam.jwd.task1.reader.validation;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

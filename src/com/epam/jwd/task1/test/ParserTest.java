@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import com.epam.jwd.task1.exception.ServiceException;
-import com.epam.jwd.task1.parser.CustomArrayParser;
+import com.epam.jwd.task1.reader.parser.CustomArrayParser;
 
 class ParserTest {
 

@@ -1,10 +1,10 @@
-package com.epam.jwd.task1.parser;
+package com.epam.jwd.task1.reader.parser;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.epam.jwd.task1.exception.ServiceException;
+import com.epam.jwd.task1.reader.validation.CustomArrayValidator;
 import com.epam.jwd.task1.entity.CustomArray;
-import com.epam.jwd.task1.validation.CustomArrayValidator;
 
 public class CustomArrayParser {
 
